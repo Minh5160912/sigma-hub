@@ -6522,7 +6522,7 @@ local Tabs = {
     thongtin = Window:AddTab({ Title = "Thong Tin", Icon = "home"}),
     scrip = Window:AddTab({ Title = "Script Main", Icon = ""}),
     kaitun = Window:AddTab({ Title = "kaitun scrip", Icon = "" }),
-    shest = Window:AddTab({ Title = "chest scrip", Icon = "chest" }),
+    chest = Window:AddTab({ Title = "chest scrip", Icon = "chest" }),
     fruit = Window:AddTab({ Title = "fruit farm scrip", Icon = "fruits" }),
     hop = Window:AddTab({ Title = "auto hop boss,VV ", Icon = "human" }),
     bouty = Window:AddTab({ Title = "auto bouty", Icon = "" }),
@@ -6922,21 +6922,21 @@ Tabs.chest:AddButton({
     Title = "auto chest",
     Description = "nha lam",
     Callback = function()
-	getgenv().Config = {
-    		["Select Join"] = "Pirates", -- hoặc Marines
-    		["Auto chests will stop if you've"] = {["Fist of Darkness"] = true, ["God's Chalice"] = true}, 
-    		["Boost Fps"] = 1, -- tối đa 30
-    		["AutoMode"] = "Tween", -- Tween hoặc Bypass
-    		["Auto Farm Chest"] = true, 
-    		["Auto Hop Server"] = true,
-    		["Chests Before Hop"] = 50,
-    		["Chat"] = "", -- nhập text hoặc ko
-    		["Chat Delay"] = 5, -- giây
-    		["Farm DarkBeard"] = true, 
-    		["Anti AFK"] = true
-		}
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/stuckez999/main/refs/heads/main/zushhubfarmchest.txt"))()
-    	end
+       getgenv().Config = {
+    	["Select Join"] = "Pirates", -- hoặc Marines
+    	["Auto chests will stop if you've"] = {["Fist of Darkness"] = true, ["God's Chalice"] = true}, 
+    	["Boost Fps"] = 1, -- tối đa 30
+    	["AutoMode"] = "Tween", -- Tween hoặc Bypass
+    	["Auto Farm Chest"] = true, 
+    	["Auto Hop Server"] = true,
+    	["Chests Before Hop"] = 50,
+    	["Chat"] = "", -- nhập text hoặc ko
+    	["Chat Delay"] = 5, -- giây
+    	["Farm DarkBeard"] = true, 
+	["Anti AFK"] = true
+       } 
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/stuckez999/main/refs/heads/main/zushhubfarmchest.txt"))()
+    end
 })
 
 --bouty script
@@ -7019,9 +7019,37 @@ Tabs.bouty:AddButton({
     end
 })
 
+
 --sigma script
 
+local section = Tabs.sigma:AddSection("troll chính mik")
 
+Tabs.sigma:AddButton({
+    Title = "trollkick hub",
+    Description = "thử 1 lần r biết",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/VxezeHubTrollKick/refs/heads/main/VxezeHubTrollKick.txt"))()
+    end
+})
+
+local section = Tabs.sigma:AddSection("hub đặc biệt")
+
+Tabs.sigma:AddButton({
+    Title = "Fly GUI script",
+    Description = "giúp bay",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    end
+})
+
+Tabs.sigma:AddButton({
+    Title = "ghost hub",
+    Description = "troll và có banhammer",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+    end
+})
+    
 
 --tab noitifi
 Fluent:Notify({
