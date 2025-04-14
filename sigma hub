@@ -1,3 +1,13 @@
+local plr = game.Players.LocalPlayer
+local executor = getexecutorname() or identifyexecutor()
+if executor then
+    if string.find(executor, "Velocity") or string.find(executor, "Wave") or string.find(executor, "Arceus") or string.find(executor,"Swift") then
+        print("Supported Executor!")
+    else
+        plr:Kick("Not supported executor!")
+    end
+end
+
 shared.LoaderTitle = " script is loading";
 shared.LoaderKeyFrames = {
     [1] = {
