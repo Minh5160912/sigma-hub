@@ -1,10 +1,22 @@
-local plr = game.Players.LocalPlayer
 local executor = getexecutorname() or identifyexecutor()
 if executor then
-    if string.find(executor, "Velocity") or string.find(executor, "Wave") or string.find(executor, "Arceus") or string.find(executor,"Swift") then
+    if string.find(executor, "Velocity") or string.find(executor, "Wave") or string.find(executor, "Arceus") or string.find(executor,"Swift") or string.find(executor, "Arceus") or string.find(executor, "Arceus") or string.find(executor,"AWP") or string.find(executor, "Delta") or string.find(executor, "Fluxus") or string.find(executor, "CodeX") or string.find(executor, "Codex") or string.find(executor, "Triagon") or string.find(executor, "Krnl") or string.find(executor, "FrostWare") or string.find(executor, "Frostware") or string.find(executor, "Nebula") or string.find(executor, "Ronix") or string.find(executor, "Atlantis") or string.find(executor, "Trigon") or string.find(executor, "Evon") or string.find(executor, "Vegax") or string.find(executor, "Cryptic") then 
         print("Supported Executor!")
+    elseif string.find(executor, "Flexer") then
+        game.Players.LocalPlayer:Kick("Very Trash Executor")
+    end
+    elseif string.find(executor, "Argon") then
+        game.Players.LocalPlayer:Kick("Trash Executor")
+    end
+    elseif string.find(executor, "Nezur") then
+        game.Players.LocalPlayer:Kick("Not supported Fake Executor")
+    end
+    elseif string.find(executor,"TNG") then
+        game.Players.LocalPlayer:Kick("Not supported skid executor!")
+    elseif not executor then
+        game.Players.LocalPlayer:Kick("Not supported executor!")
     else
-        plr:Kick("Not supported executor!")
+        game.Players.LocalPlayer:Kick("Not supported executor!")
     end
 end
 
